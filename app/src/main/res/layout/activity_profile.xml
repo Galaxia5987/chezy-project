@@ -8,37 +8,36 @@
 
     <EditText
         android:id="@+id/address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_width="249dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Enter Address"
         android:inputType="textPostalAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/business_name" />
 
     <EditText
         android:id="@+id/business_description"
-        android:layout_width="248dp"
-        android:layout_height="149dp"
+        android:layout_width="246dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Enter a description of your business"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address"
-        app:layout_constraintVertical_bias="0.069" />
+        app:layout_constraintTop_toBottomOf="@+id/business_link" />
 
     <Button
         android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="20dp"
         android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -47,24 +46,37 @@
 
     <EditText
         android:id="@+id/business_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
+        android:layout_width="249dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Enter business name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_title" />
 
     <TextView
         android:id="@+id/profile_title"
-        android:layout_width="148dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="252dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="24dp"
         android:text="Create Business Profile"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/business_link"
+        android:layout_width="249dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Enter website link --optional"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address" />
 </androidx.constraintlayout.widget.ConstraintLayout>

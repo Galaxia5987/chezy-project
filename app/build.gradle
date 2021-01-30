@@ -4,7 +4,9 @@ plugins {
 
 android {
     compileSdkVersion 29
-
+    packagingOptions {
+        pickFirst 'META-INF/LICENSE.txt' // picks the JavaMail license file
+    }
     defaultConfig {
         applicationId "com.example.galacticmarket"
         minSdkVersion 16
@@ -27,8 +29,16 @@ android {
     }
 }
 
-dependencies {
+repositories {
+    jcenter()
+    maven {
+        url "https://maven.java.net/content/groups/public/"
+    }
+}
 
+dependencies {
+    compile 'com.sun.mail:android-mail:1.6.2'
+    compile 'com.sun.mail:android-activation:1.6.2'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'

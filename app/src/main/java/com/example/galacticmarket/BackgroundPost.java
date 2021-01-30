@@ -23,12 +23,12 @@ import java.net.URLEncoder;
  * The database contains 2 tables, The first one contains the login data of the users,
  * and the second contains the data for the shop profile.
  */
-public class BackgroundWorker extends AsyncTask<String, Void, String> {
+public class BackgroundPost extends AsyncTask<String, Void, String> {
     Context context;
     private AlertDialog alertDialog;
     private String result;
 
-    BackgroundWorker(Context ctx) {
+    BackgroundPost(Context ctx) {
         context = ctx;
     }
 

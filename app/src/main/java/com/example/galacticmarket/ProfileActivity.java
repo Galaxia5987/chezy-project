@@ -23,15 +23,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         createView();
-    }
-
-    private void createView() {
-        business_name = findViewById(R.id.business_name);
-        address = findViewById(R.id.address);
-        business_link = findViewById(R.id.business_link);
-        business_description = findViewById(R.id.business_description);
-        submit_button = findViewById(R.id.submit_button);
-
+        
         submit_button.setOnClickListener(view -> {
             if (business_name.getText().toString().equals("") || address.getText().toString().equals("") || business_description.getText().toString().equals("")) {
                 Snackbar.make(view, "Please enter all relevant information", Snackbar.LENGTH_LONG).show();
@@ -43,6 +35,13 @@ public class ProfileActivity extends AppCompatActivity {
                         Snackbar.LENGTH_LONG).show();
             }
         });
+    }
 
+    private void createView() {
+        business_name = findViewById(R.id.business_name);
+        address = findViewById(R.id.address);
+        business_link = findViewById(R.id.business_link);
+        business_description = findViewById(R.id.business_description);
+        submit_button = findViewById(R.id.submit_button);
     }
 }

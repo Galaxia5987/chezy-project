@@ -19,11 +19,19 @@ public class CountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_count);
         createView();
         add_button.setOnClickListener(view -> {
-            count = Integer.parseInt(count_text.getText().toString()) + 1;
+            String s = count_text.getText().toString();
+            if (s.equals(""))
+                count = 1;
+            else
+                count = Integer.parseInt(s) + 1;
             count_text.setText(Integer.toString(count));
         });
         subtract_button.setOnClickListener(view -> {
-            count = Integer.parseInt(count_text.getText().toString()) - 1;
+            String s = count_text.getText().toString();
+            if (s.equals(""))
+                count = 0;
+            else
+                count = Integer.parseInt(s) - 1;
             if (count < 0)
                 count = 0;
             count_text.setText(Integer.toString(count));

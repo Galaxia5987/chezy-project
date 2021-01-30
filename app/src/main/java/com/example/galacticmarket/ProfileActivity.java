@@ -33,9 +33,27 @@ public class ProfileActivity extends AppCompatActivity {
                                 ", Link: " + business_link.getText().toString() +
                                 ", Description: " + business_description.getText().toString(),
                         Snackbar.LENGTH_LONG).show();
+                send();
+                reset();
             }
         });
+
+
     }
+
+    private void send() {
+        BackgroundPost post = new BackgroundPost(this);
+        post.execute("pu", business_name.getText().toString(), address.getText().toString(),
+                business_link.getText().toString(), business_description.getText().toString());
+    }
+
+    private void reset() {
+        business_name.setText("");
+        address.setText("");
+        business_link.setText("");
+        business_description.setText("");
+    }
+
 
     private void createView() {
         business_name = findViewById(R.id.business_name);
